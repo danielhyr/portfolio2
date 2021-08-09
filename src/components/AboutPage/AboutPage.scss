@@ -1,0 +1,140 @@
+@use '../../partials/mixin' as *;
+
+
+.atext {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+
+        &-text{
+        }
+
+       &__h3{
+            margin: 0px;
+            text-align: center;
+        }
+        
+            &__parag{
+                width: 100%;
+                text-indent: 25px;
+                line-height: 1.8rem;
+                font-size: 14px;
+                @include tablet {
+                    font-size: 2rem;
+                    text-indent: 45px;
+                    line-height: 3.3rem;
+
+                }
+            }   
+
+            &__paragIns{
+                text-indent: 25px;
+
+            }
+
+    &-box{
+        background-color: white;
+        width: 60vw;
+        height: 70vh;
+        margin-top: 1rem;
+        border-radius: 30px;
+        padding: 30px 40px;
+        animation: fadein 2.5s  cubic-bezier(.97,.05,.11,.73);
+        display: flex;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+        font-size: 20px;
+        position: relative;
+        @include tablet {
+            width: 65vw;
+            font-size: 30px;
+
+        }
+
+
+ 
+    }
+
+    &__profile{
+        display: none;
+        object-fit: cover;
+        border-radius: 20px;
+        filter: grayscale(100%);
+        animation: grayedout 3s infinite alternate;
+        width: 19rem;
+        margin: 1rem;
+        @include tablet {
+            display: flex;
+            float: right;
+        }
+    }
+    &-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        position: relative;
+        z-index: 2;
+        @include tablet {
+            margin-top: 0.2rem;
+
+        }
+    }
+
+    &__header{
+        text-align: center;
+        color: #fff;
+        font-size: 50px;
+        margin: 0px;
+        animation:fadein 1s ;
+        &-span{
+            color: rgb(87, 84, 84);
+        }
+    }
+    &__headersmall{
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        margin-top: 60px;
+        // animation: slide 12s steps(4) infinite;
+        // position: relative;
+        // top: 0;
+        &-span {
+            position: relative;
+            z-index: 1;
+            padding: 4px;
+
+            &::after{
+
+                content: "Who?";
+                position: absolute;
+                color: rgb(83, 93, 83);
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: #a6bae9;
+                animation: typing 5s steps(10) infinite;
+                z-index: 3;
+                border-radius: 10px;
+
+              }
+        }
+    }
+}
+
+@keyframes grayedout {
+	0% {
+        filter: grayscale(100%);
+	}
+
+	100% {
+        filter: grayscale(10%);
+	}
+}

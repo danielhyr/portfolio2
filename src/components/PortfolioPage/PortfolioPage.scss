@@ -97,9 +97,14 @@
     &__header{
         text-align: center;
         color: #fff;
-        font-size: 50px;
+        font-size: 40px;
         margin: 0px;
         animation:fadein 1s ;
+
+        @include tablet {
+            font-size: 50px;
+        }
+
         &-span{
             color: rgb(87, 84, 84);
         }

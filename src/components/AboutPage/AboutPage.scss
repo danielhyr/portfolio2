@@ -38,15 +38,15 @@
 
     &-box{
         background-color: white;
-        width: 60vw;
+        width: 90vw;
         height: 70vh;
         margin-top: 1rem;
         border-radius: 30px;
-        padding: 30px 40px;
         animation: fadein 2.5s  cubic-bezier(.97,.05,.11,.73);
         display: flex;
         overflow-y: scroll;
         overflow-x: hidden;
+        padding: 10px;
 
         box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
         font-size: 20px;
@@ -54,6 +54,7 @@
         @include tablet {
             width: 65vw;
             font-size: 30px;
+            padding: 30px 40px;
 
         }
 
@@ -91,9 +92,13 @@
     &__header{
         text-align: center;
         color: #fff;
-        font-size: 50px;
+        font-size: 40px;
         margin: 0px;
         animation:fadein 1s ;
+        @include tablet {
+            font-size: 50px;
+
+        }
         &-span{
             color: rgb(87, 84, 84);
         }

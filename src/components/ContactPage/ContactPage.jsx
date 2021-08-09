@@ -5,7 +5,7 @@ import emailjs from 'emailjs-com'
 import github from '../../data/images/github.png'
 import linkedin from '../../data/images/linkedin.png'
 import Particles from 'react-particles-js';
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 function ContactPage() {
 
@@ -23,59 +23,56 @@ function ContactPage() {
 
     return (
         <motion.main className="about"
-        initial={{ opacity: 1, y: "20%" }}
-        animate={{ opacity: 1, y: "0%" }}
-        exit={{
-            opacity: 0, y: "-50%", transition: {
-                delay: 0,
-                duration: 0.3
-            }
-        }}>
+            initial={{ opacity: 1, y: "20%" }}
+            animate={{ opacity: 1, y: "0%" }}
+            exit={{
+                opacity: 0, y: "-50%", transition: {
+                    delay: 0,
+                    duration: 0.3
+                }
+            }}>
             <section className="ctext">
                 <Header />
                 <div className="ctext-description">
                     <h1 className="ctext__header"> <span className="ctext__header-span">Contact </span> Me</h1>
                     <div className="ctext-box">
-                        <div className="nav__logoWrap">
-                            <span className="nav__logo">D</span>
-                            <ul className="ctext-links">
-                                <li><a href="https://github.com/danielhyr"><img className="ctext-links__iconsGit" src={github} /></a></li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/daniel-h-rha/"><img className="ctext-links__icons" src={linkedin} /></a></li>
-                            </ul>
-                        </div>
+                        <ul className="ctext-links">
+                            <li><a href="https://github.com/danielhyr"><img className="ctext-links__iconsGit" src={github} /></a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/daniel-h-rha/"><img className="ctext-links__icons" src={linkedin} /></a></li>
+                        </ul>
 
-                        <h2 className="ctext__h2">Shoot me an Email</h2>
 
                         <form class="form" onSubmit={sendEmail}>
+                        <h2 className="ctext__h2">Email Me</h2>
                             <div class="wideWrap">
                                 <div class="styled-input wide">
-                                    <input name="email" type="email" required  placeholder = "your email"/>
+                                    <input name="email" type="email" required placeholder="your email" />
                                 </div>
                             </div>
                             <div className="styled-mid">
                                 <div class="styled-input">
-                                    <input name="name" type="text" required  placeholder = "name" />
+                                    <input name="name" type="text" required placeholder="name" />
                                 </div>
                                 <div class="styled-input styled-input--2">
-                                    <input name="subject" type="text" required  placeholder = "subject"/>
+                                    <input name="subject" type="text" required placeholder="subject" />
                                 </div>
                             </div>
 
                             <div class="lastWrap">
                                 <div class="styled-input wide">
-                                    <textarea placeholder = "message" name="message" required></textarea>
+                                    <textarea placeholder="message" name="message" required></textarea>
                                 </div>
                             </div>
                             <div class="btnWrap">
-                                <button type="submit" class="submit-btn">Send Message</button>
+                                <button type="submit" class="submit-btn">Send</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
             <section className="animation">
-            <Particles
+                <Particles
                     params={{
                         "particles": {
                             "number": {

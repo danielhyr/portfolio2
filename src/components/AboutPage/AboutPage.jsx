@@ -26,7 +26,7 @@ function AboutPage() {
                     <div className="atext-box">
 
                         <div className="atext-text">
-                            <h3 className="atext__h3">I was once a normal guy, indifferent to technology...</h3>
+                            <h3 className="atext__h3">I was once a regular guy, indifferent to technology...</h3>
                             <p className="atext__parag"> <img className="atext__profile" src={me} alt="the creator" />Now I live and breathe code - as if it was what I was born to do.
                                 <br></br>
                                 Well, maybe it really is true; building has always been my passion, and after all, what is more exciting to build than the closest thing to magic there is in the real world?

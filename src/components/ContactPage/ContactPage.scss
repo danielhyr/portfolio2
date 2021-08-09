@@ -11,13 +11,13 @@
     &-links{
         list-style-type: none;
         position: absolute;
-        top: 5rem;
+        top: 1rem;
         left: 2.3rem;
         display: flex;
         padding: 0px;
-        flex-direction: column;
+        flex-direction: row;
         @include tablet {
-            top: 5rem;
+            top: 0px;
             left: 2.3rem;
         }
 
@@ -34,11 +34,13 @@
         }
     }
     &__h2{
-        padding-bottom: 20px;
         text-align: center;
         border-bottom: 1px solid black;
-        margin-bottom: 0px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+
         @include tablet {
+            padding-bottom: 20px;
             margin-bottom: 15px;
 
         }
@@ -103,9 +105,13 @@
     &__header{
         text-align: center;
         color: #fff;
-        font-size: 50px;
+        font-size: 40px;
         margin: 0px;
         animation:fadein 1s ;
+        @include tablet {
+            font-size: 50px;
+
+        }
         &-span{
             color: rgb(87, 84, 84);
         }
@@ -171,13 +177,17 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
     &-mid {
         display: flex;
         justify-content: space-between;
+
     }
     &-input {
-        float: left;
         width: 293px;
-        margin: 1rem 0;
         position: relative;
         border-radius: 4px;
+        margin:0.4rem 0px;
+        @include tablet {
+            margin: 1rem 0;
+
+        }
     }
 }
 
@@ -204,13 +214,17 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
 
 input,
 textarea {
-    padding: 30px;
+    padding: 10px;
     border: 0;
     width: 100%;
     font-size: 1rem;
     background-color: rgb(240, 238, 238);
     color: black;
     border-radius: 4px;
+    @include tablet {
+        padding: 20px;
+
+    }
 }
 
 input:focus,
@@ -225,22 +239,23 @@ textarea:focus ~ span {
 
 textarea {
     width: 100%;
-    height: 80px;
     overflow: hidden;
+    height: 30%;
 }
 
 .form {
     width: 650px;
     max-width: 80%;
-    height: 100%;
+    max-height: 30%;
+
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     padding: 10px;
     justify-content: space-around;
-    height: 80%;
     @include tablet {
         max-width: 90%;
+        height: 40%;
     }
     ::-webkit-scrollbar {
         width: 20px;
@@ -274,4 +289,3 @@ textarea {
 }
 
 
-input {}
